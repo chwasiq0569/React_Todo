@@ -1,0 +1,120 @@
+$primary-color: #db4c3f;
+$secondary-color: hsl(0, 0%, 98%);
+$secondary-border: #e0dada;
+$hover-bg: #ece5e5;
+$light-black: #473c3b;
+$icon-color: #6d5f5e;
+.dailyTodos__Wrapper {
+  width: 100%;
+  height: auto;
+  .dailyTodo {
+    .date {
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid $secondary-border;
+      span {
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+    }
+    .todo {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $secondary-border;
+      .leftSide {
+        display: flex;
+      }
+      .middle {
+        margin-left: 0.5rem;
+        width: 85%;
+        flex: 1;
+        div {
+          width: 100%;
+          height: auto;
+          font-size: 0.75rem;
+          overflow-x: none;
+          overflow-y: auto;
+          font-family: Helvetica, sans-serif;
+          letter-spacing: 0.5px;
+          word-wrap: break-word;
+          color: $light-black;
+        }
+      }
+      .rightSide {
+        width: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        display: flex;
+      }
+    }
+    .addTodoBtn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      .addTodoBtn__leftSide {
+        width: 4%;
+        display: flex;
+      }
+      .addTodoBtn__rightSide {
+        width: 96%;
+        span {
+          font-size: 0.75rem;
+          font-family: Helvetica, sans-serif;
+          letter-spacing: 0.5px;
+          color: $light-black;
+        }
+      }
+    }
+    .addtodo {
+      padding: 0.35rem;
+      width: 100%;
+      height: auto;
+      border: 2px solid red;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      [contenteditable="true"]:empty:before {
+        content: attr(placeholder);
+        pointer-events: none;
+        display: block;
+        font-size: 0.75rem;
+        max-height: 200px !important;
+        overflow-y: auto;
+        font-family: Helvetica, sans-serif;
+        ::placeholder {
+          font-size: 0.65rem;
+          font-family: Helvetica, sans-serif;
+        }
+      }
+      div[contenteditable="true"] {
+        width: 100%;
+        outline: none !important;
+        font-size: 0.75rem;
+        max-height: 200px !important;
+        overflow-y: auto;
+        font-family: Helvetica, sans-serif;
+        ::placeholder {
+          font-size: 0.65rem;
+          font-family: Helvetica, sans-serif;
+        }
+      }
+      .addtodo__Btns {
+        width: 100%;
+        height: 35%;
+        margin-top: 0.5rem;
+        .btnsContainer {
+          width: 10.5%;
+          display: flex;
+          justify-content: space-between;
+          button {
+            padding: 4px 8px;
+            border: 1px solid $secondary-border;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
